@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+    font-family: 'arial';
+    color:yellow;
+    font-size: 15px;
+    line-height: 1.5em;
+    background:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 80%;
+    height: vh;
+    margin: auto;
+}
+.titleBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: yellow;
+    border-style: solid;
+    margin-top: 1em;
+    height: 5vh;
+}
+
+.messages{
+    overflow: scroll;
+    border-color: yellow;
+    border-style: solid;
+    margin-top: 1em;
+    height: 50vh;
+    padding: 2em;
+}
+
+.message{
+    margin-top: .5em;
+    list-style: none;
+}
+
+.comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
+    height: 10vh;
+}
+
+#utilisateur {
+    font-size: 1.5em;
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px  solid #deec13;
+    color:white;
+    background:#000000;
+    
+}
+
+#message {
+    font-size: 1.5em;
+    width: 55%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px  solid #deec13;
+    color:white;
+    background:#000000;
+}
+.envoyer{
+    font-size: 1.5em;
+    color:#deec13;   
+    background-color: #000000;
+ 
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px  solid #deec13;
+    justify-content: center;
+    text-align: center;
+    
+} 
+.envoyer:hover {
+    color:white;
+    background:#deec13;
+  }
