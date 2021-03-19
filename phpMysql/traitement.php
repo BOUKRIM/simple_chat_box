@@ -2,15 +2,12 @@
 
 include_once('database.php');
 include('index.php');
-if(isset($_POST['envoyer']) && isset($_POST['message']) && isset($_POST['utilisateur'])){
-$username = $_POST['utilisateur'];
-$cmt= $_POST['message'];
-$query_one= "INSERT INTO messages(utilisateur,contenu_message) VALUES ('$username','$cmt')";
-$result = mysqli_query($link,$query_one);
-if(!$result){
-    echo "erreur :" . mysqli_query($query_one);
-}
-}
+
+
+
+
+
+
 // si le message est envoyé correctement
     // récupérer les données dans des variables
     // si les valeurs récupéré sont vides

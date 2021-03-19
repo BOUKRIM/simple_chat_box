@@ -19,6 +19,16 @@ main{
     height: vh;
     margin: auto;
 }
+.logout{
+    font-size: 1.5em;
+    color:#deec13;   
+    background-color: #000000; 
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px  solid #deec13;
+    float:right;
+    
+}
 .titleBar {
     display: flex;
     align-items: center;
@@ -58,8 +68,7 @@ main{
     border-radius: 10px;
     border: 3px  solid #deec13;
     color:white;
-    background:#000000;
-    
+    background:#000000;    
 }
 
 #message {
@@ -74,16 +83,18 @@ main{
 .envoyer{
     font-size: 1.5em;
     color:#deec13;   
-    background-color: #000000;
- 
+    background-color: #000000; 
     padding: 10px;
     border-radius: 10px;
     border: 3px  solid #deec13;
     justify-content: center;
-    text-align: center;
-    
+    text-align: center;    
 } 
 .envoyer:hover {
     color:white;
     background:#deec13;
   }
+
+
+
+  
