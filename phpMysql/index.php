@@ -42,13 +42,20 @@
         </div>
         <div class="titleBar container">
         <h1>Welcome <?php echo $_SESSION['name'] ?></h1>
-        <!-- $_SESSION['nom'] -->
+        
         </div>
         <div class="messages container">
             <ul>
                 <?php foreach ($results as $row) : ?>
 
-                    <li class="message"><span> <?php echo $row["date"];  ?> - </span><?php echo $row["cmt_user"];  ?>  : <?php echo $row["msg"];  ?> </li>
+                    <li class="message"><span> <?php echo $row["date"];  ?> - </span><?php echo $row["cmt_user"];  ?>  : <?php echo $row["msg"];  ?> 
+                     
+                    
+                    <a href="add.php?edit=<?php echo $row['id_comment']; ?>" class="btn btn-success">Edit</a>
+
+                    <a href="edit.php?delete=<?php echo $row['id_comment']; ?>" onClick="return confirm_delete()" class="btn btn-danger">Delete</a>
+                    
+                    </li>
                 <?php endforeach ?>
             </ul>
         </div>

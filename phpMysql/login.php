@@ -1,13 +1,15 @@
 <?php
 include_once('database.php');
 session_start();
+
 if (isset($_SESSION['name'])) {
     header("location: index.php");
 }
+
 if(isset($_POST['login'])){
 $name=$_POST['name'];
 $password=$_POST['password'];
-$query_log="SELECT * FROM utilisateurs WHERE nam='$name' AND password='$password'";
+$query_log="SELECT * FROM utilisateurs WHERE name='$name' AND password='$password'";
 $result=mysqli_query($link,$query_log);
 if(mysqli_num_rows($result) >0){
     $_SESSION['name']=$name;
@@ -27,7 +29,7 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet"  href="css/login.css?v=<?php echo time(); ?>">
-    <title>LOGIN</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="content">

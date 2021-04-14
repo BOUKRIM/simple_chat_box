@@ -8,3 +8,4 @@ if(mysqli_connect_errno()){
     echo 'erreur de connexion : '. mysqli_connect_error();
     die();
 }
+?>

@@ -1,18 +1,15 @@
 <?php
 include_once('database.php');
 
-session_start();
-
-
+// session_start();
 if(isset($_POST['signup'])){
     $utilisateur=$_POST['nom'];
     $password=$_POST['password'];
-    $query_two="INSERT INTO utilisateurs (nam,password)VALUE('$utilisateur','$password')";
+    $query_two="INSERT INTO utilisateurs (name,password)VALUE('$utilisateur','$password')";
     $signup = mysqli_query($link,$query_two);
     if(!$signup){
     echo "erreur :" . mysqli_query($query_two);
 }else{
-    
     header("location:login.php");
 }
 }
@@ -29,7 +26,7 @@ if(isset($_POST['signup'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet"  href="css/sign-up.css?v=<?php echo time(); ?>">
-    <title>sign Up</title>
+    <title>Sign Up</title>
 </head>
 <body>
     <div class="content">
