@@ -17,6 +17,19 @@
         $results = mysqli_query($link, $query);
     //selectionner les message dans la base de donnée
     
+    if(isset($_GET['edit'])) {
+        $id = $_GET['edit'];
+    
+        $update = true;
+    
+        $select_id_query = "SELECT * FROM messages WHERE id_comment=$id";
+        $result = mysqli_query($link,$select_id_query);
+        if($result->num_rows){
+            $row = $result->fetch_array();
+            $cmt = $row['msg'];
+            
+        }
+    }
     // $query = "SELECT * FROM `messages` ORDER BY `temps` ASC  ";
 
     
@@ -51,9 +64,9 @@
                     <li class="message"><span> <?php echo $row["date"];  ?> - </span><?php echo $row["cmt_user"];  ?>  : <?php echo $row["msg"];  ?> 
                      
                     
-                    <a href="add.php?edit=<?php echo $row['id_comment']; ?>" class="btn btn-success">Edit</a>
+                    <a href="edit.php?edit=<?php echo $row['id_comment']; ?>" class="btn btn-success">Edit</a>
 
-                    <a href="edit.php?delete=<?php echo $row['id_comment']; ?>" onClick="return confirm_delete()" class="btn btn-danger">Delete</a>
+                    <a href="delete.php?delete=<?php echo $row['id_comment']; ?>" class="btn btn-danger">Delete</a>
                     
                     </li>
                 <?php endforeach ?>
